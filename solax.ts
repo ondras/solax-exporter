@@ -125,17 +125,17 @@ const DEFS: ItemDefinition[] = [
 
 	{i:[169,170], m:"battery_voltage_2_volts", op:u32div100},
 
-//	{i:42, m:"debug", l:{index:"42"}},
-//	{i:43, m:"debug", op:s16, l:{index:"43"}},
-//	{i:44, m:"debug", op:s16, l:{index:"44"}},
-//	{i:50, m:"debug", l:{index:"50"}},
-//	{i:110, m:"debug", l:{index:"110"}},
-//	{i:111, m:"debug", l:{index:"111"}},
-//	{i:125, m:"debug", l:{index:"125"}},
-//	{i:126, m:"debug", l:{index:"126"}},
-//	{i:127, m:"debug", l:{index:"127"}},
-//	{i:164, m:"debug", l:{index:"164"}},
-//	{i:165, m:"debug", l:{index:"165"}}
+	{i:42, m:"debug", l:{index:"42"}},
+	{i:43, m:"debug", op:s16, l:{index:"43"}},
+	{i:44, m:"debug", op:s16, l:{index:"44"}},
+	{i:50, m:"debug", l:{index:"50"}},
+	{i:110, m:"debug", l:{index:"110"}},
+	{i:111, m:"debug", l:{index:"111"}},
+	{i:125, m:"debug", l:{index:"125"}},
+	{i:126, m:"debug", l:{index:"126"}},
+	{i:127, m:"debug", l:{index:"127"}},
+	{i:164, m:"debug", l:{index:"164"}},
+	{i:165, m:"debug", l:{index:"165"}}
 ];
 
 function fullMetricName(metric: Metric) {
