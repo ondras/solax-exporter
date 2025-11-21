@@ -1,5 +1,6 @@
 function div10(n: number) { return n/10; }
 function div100(n: number) { return n/100; }
+function div1000(n: number) { return n/1000; }
 
 function s16(n: number) {
 	return (n < 32768 ? n : n - 65536);
@@ -16,6 +17,7 @@ function s32(a: number, b: number) {
 }
 function u32div10(a: number, b: number) { return div10(u32(a, b)); }
 function u32div100(a: number, b: number) { return div100(u32(a, b)); }
+function u32div1000(a: number, b: number) { return div1000(u32(a, b)); }
 
 type SingleOp = (n:number) => number;
 type DoubleOp = (a:number, b:number) => number;
@@ -115,6 +117,8 @@ const DEFS: ItemDefinition[] = [
 	{i:105, m:"battery_temperature_celsius", op:s16},
 	{i:106, m:"battery_remaining_energy", op:div10},
 
+	{i:[127,128], m:"battery_combined_energy_kwh_total", op:u32div1000, a:"battery in + out"},
+
 	/**
 		0: "Self Use Mode",
 		1: "Force Time Use",
@@ -133,10 +137,8 @@ const DEFS: ItemDefinition[] = [
 	{i:111, m:"debug", l:{index:"111"}},
 	{i:125, m:"debug", l:{index:"125"}},
 	{i:126, m:"debug", l:{index:"126"}},
-	{i:[127,128], m:"debug", l:{index:"127"}, op:u32div100},
 	{i:164, m:"debug", l:{index:"164"}},
 	{i:165, m:"debug", l:{index:"165"}}
-
 ];
 
 function fullMetricName(metric: Metric) {
