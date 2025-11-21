@@ -133,9 +133,10 @@ const DEFS: ItemDefinition[] = [
 	{i:111, m:"debug", l:{index:"111"}},
 	{i:125, m:"debug", l:{index:"125"}},
 	{i:126, m:"debug", l:{index:"126"}},
-	{i:127, m:"debug", l:{index:"127"}},
+	{i:[127,128], m:"debug", l:{index:"127"}, op:u32div100},
 	{i:164, m:"debug", l:{index:"164"}},
 	{i:165, m:"debug", l:{index:"165"}}
+
 ];
 
 function fullMetricName(metric: Metric) {
